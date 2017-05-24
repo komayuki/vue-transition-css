@@ -1,18 +1,11 @@
-.slide-left-enter-active {
-  animation: jump .2s;
+.slide-left-enter-active,
+.slide-fade-leave-active {
+  transition: all .3s ease;
 }
-
-.slide-left-leave-active {
-  animation: jump .2s reverse;
+.slide-left-enter{
+  transform: translateX(10px);
 }
-@keyframes jump {
-  0% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+.slide-left-leave-to,
+.slide-left-leave,{
+  transform: translateX(10px);
 }

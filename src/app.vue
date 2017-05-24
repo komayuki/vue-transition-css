@@ -15,6 +15,12 @@
           <div class="block block-fade" v-if="isFade"></div>
         </transition>
       </div>
+      <div class="item">
+        <button @click="start('isSlideLeft')">SlideLeft</button>
+        <transition name="slide-left">
+          <div class="block block-fade" v-if="isSlideLeft"></div>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +31,8 @@ export default {
   data () {
     return {
       isJump: false,
-      isFade: false
+      isFade: false,
+      isSlideLeft: false
     }
   },
   methods: {
