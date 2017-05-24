@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -e demo/main.js -o demo/bundle.js",
-    "watchi": "watchify demo/main.js -o demo/bundle.js",
-    "start": "http-server demo"
+    "build": "browserify -e src/main.js -o docs/bundle.js",
+    "watch": "watchify src/main.js -o docs/bundle.js",
+    "start": "http-server docs"
   },
   "repository": {
     "type": "git",

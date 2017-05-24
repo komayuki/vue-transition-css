@@ -1,0 +1,18 @@
+.slide-left-enter-active {
+  animation: jump .2s;
+}
+
+.slide-left-leave-active {
+  animation: jump .2s reverse;
+}
+@keyframes jump {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

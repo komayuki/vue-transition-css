@@ -1,63 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 40, stdin */\n.h1 {\n  text-align: center; }\n\n/* line 43, stdin */\n.container {\n  width: 800px;\n  margin: 0 auto; }\n\n/* line 47, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 32px;\n  vertical-align: top; }\n\n/* line 52, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px;\n  display: inline-block;\n  vertical-align: top; }\n\n/* line 59, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 62, stdin */\n.block-fade {\n  background-color: #29B6F6; }\n\n/* line 65, stdin */\nbutton {\n  width: 100px;\n  padding: 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top; }")
-;(function(){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  name: 'app',
-  data: function data() {
-    return {
-      isJump: false,
-      isFade: false
-    };
-  },
-
-  methods: {
-    start: function start(target) {
-      var _this = this;
-
-      if (this[target]) return;
-      this[target] = true;
-      setTimeout(function () {
-        _this[target] = false;
-      }, 1000);
-    }
-  }
-};
-})()
-if (module.exports.__esModule) module.exports = module.exports.default
-var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
-if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1)])])}
-__vue__options__.staticRenderFns = []
-if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), true)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  module.hot.dispose(__vueify_style_dispose__)
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e8d67832", __vue__options__)
-  } else {
-    hotAPI.rerender("data-v-e8d67832", __vue__options__)
-  }
-})()}
-},{"vue":5,"vue-hot-reload-api":4,"vueify/lib/insert-css":6}],2:[function(require,module,exports){
-'use strict';
-
-var Vue = require('vue');
-var App = require('./app.vue');
-
-var app = new Vue({
-  el: '#app',
-  render: function render(h) {
-    return h(App);
-  }
-});
-
-},{"./app.vue":1,"vue":5}],3:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -243,7 +184,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],4:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -389,7 +330,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],5:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.3.3
@@ -7530,7 +7471,7 @@ setTimeout(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":3}],6:[function(require,module,exports){
+},{"_process":1}],4:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -7555,4 +7496,63 @@ exports.insert = function (css) {
   }
 }
 
-},{}]},{},[2]);
+},{}],5:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 41, stdin */\n.h1 {\n  text-align: center; }\n\n/* line 44, stdin */\n.container {\n  width: 800px;\n  margin: 0 auto; }\n\n/* line 48, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 32px;\n  vertical-align: top; }\n\n/* line 53, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px;\n  display: inline-block;\n  vertical-align: top; }\n\n/* line 60, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 63, stdin */\n.block-fade {\n  background-color: #29B6F6; }\n\n/* line 66, stdin */\nbutton {\n  width: 100px;\n  padding: 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top;\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }\n\n/* line 77, stdin */\nbutton:hover {\n  box-shadow: none; }")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  name: 'app',
+  data: function data() {
+    return {
+      isJump: false,
+      isFade: false
+    };
+  },
+
+  methods: {
+    start: function start(target) {
+      var _this = this;
+
+      if (this[target]) return;
+      this[target] = true;
+      setTimeout(function () {
+        _this[target] = false;
+      }, 1000);
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")]),_vm._v(" "),_c('h2',[_vm._v("Transition Pattern")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1)])])}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d80bff4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-5d80bff4", __vue__options__)
+  }
+})()}
+},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],6:[function(require,module,exports){
+'use strict';
+
+var Vue = require('vue');
+var App = require('./app.vue');
+
+var app = new Vue({
+  el: '#app',
+  render: function render(h) {
+    return h(App);
+  }
+});
+
+},{"./app.vue":5,"vue":3}]},{},[6]);

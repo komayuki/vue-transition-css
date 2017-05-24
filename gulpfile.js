@@ -5,7 +5,7 @@ var cleanCss = require('gulp-clean-css');
 var concatCss = require('gulp-concat-css');
 
 gulp.task('sass' , function () {
-  return gulp.src('./sass/*.scss')
+  return gulp.src('./src/sass/*.scss')
     .pipe(concatCss('vue-transition.css'))
     .pipe(sass())
     .pipe(cleanCss())
@@ -15,5 +15,5 @@ gulp.task('sass' , function () {
 
 
 gulp.task('sass:watch', function() {
-  gulp.watch('./sass/*.scss', ['sass']);
+  gulp.watch('./src/sass/*.scss', ['sass']);
 });

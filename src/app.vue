@@ -2,6 +2,7 @@
   <div>
     <div class="container">
       <h1 class="h1">vue-transition-css</h1>
+      <h2>Transition Pattern</h2>
       <div class="item">
         <button @click="start('isJump')">Jump</button>
         <transition name="jump">
@@ -70,5 +71,10 @@ button{
   border: solid 1px #dcdcdc;
   margin-right: 20px;
   vertical-align: top;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+button:hover{
+  box-shadow: none;
 }
 </style>
