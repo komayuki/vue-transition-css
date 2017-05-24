@@ -3,9 +3,15 @@
     <div class="container">
       <h1 class="h1">vue-transition-css</h1>
       <div class="item">
-        <button @click="start('isJump')">jump</button>
+        <button @click="start('isJump')">Jump</button>
         <transition name="jump">
           <div class="block block-jump" v-if="isJump"></div>
+        </transition>
+      </div>
+      <div class="item">
+        <button @click="start('isFade')">Fade</button>
+        <transition name="fade">
+          <div class="block block-fade" v-if="isFade"></div>
         </transition>
       </div>
     </div>
@@ -17,7 +23,8 @@ export default {
   name: 'app',
   data () {
     return {
-      isJump: false
+      isJump: false,
+      isFade: false
     }
   },
   methods: {
@@ -34,19 +41,34 @@ export default {
   text-align: center;
 }
 .container{
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
+}
+.item{
+  height: 100px;
+  margin-bottom: 32px;
+  vertical-align: top;
 }
 .block{
   width: 100px;
   height: 100px;
   margin: 0 0 16px 16px;
+  display: inline-block;
+  vertical-align: top;
 }
 .block-jump{
   background-color: #FFA000;
 }
+.block-fade{
+  background-color: #29B6F6;
+}
 button{
+  width: 100px;
+  padding: 16px;
+  font-size: 14px;
   background: #fff;
   border: solid 1px #dcdcdc;
+  margin-right: 20px;
+  vertical-align: top;
 }
 </style>
