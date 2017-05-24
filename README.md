@@ -1,8 +1,5 @@
-#vue-transition-css  
+# vue-transition-css  
 
-#github page  
-https://komayuki.github.io/vue-transition-css/
-
-#Usage  
+## Usage  
 build  
 `npm run build`

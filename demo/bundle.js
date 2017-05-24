@@ -1,28 +1,49 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 33, stdin */\n.h1 {\n  text-align: center; }\n\n/* line 36, stdin */\n.container {\n  width: 1000px;\n  margin: 0 auto; }\n\n/* line 40, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px; }\n\n/* line 45, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 48, stdin */\nbutton {\n  background: #fff;\n  border: solid 1px #dcdcdc; }")
 ;(function(){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {};
+exports.default = {
+  name: 'app',
+  data: function data() {
+    return {
+      isJump: false
+    };
+  },
+
+  methods: {
+    start: function start(target) {
+      var _this = this;
+
+      if (this[target]) return;
+      this[target] = true;
+      setTimeout(function () {
+        _this[target] = false;
+      }, 1000);
+    }
+  }
+};
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("vue-transition-css")]),_vm._v(" "),_c('div',[_vm._v("name")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1)])])}
+__vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-e8d67832", __vue__options__)
   } else {
-    hotAPI.reload("data-v-e8d67832", __vue__options__)
+    hotAPI.rerender("data-v-e8d67832", __vue__options__)
   }
 })()}
-},{"vue":5,"vue-hot-reload-api":4}],2:[function(require,module,exports){
+},{"vue":5,"vue-hot-reload-api":4,"vueify/lib/insert-css":6}],2:[function(require,module,exports){
 'use strict';
 
 var Vue = require('vue');
@@ -7508,4 +7529,29 @@ setTimeout(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":3}]},{},[2]);
+},{"_process":3}],6:[function(require,module,exports){
+var inserted = exports.cache = {}
+
+function noop () {}
+
+exports.insert = function (css) {
+  if (inserted[css]) return noop
+  inserted[css] = true
+
+  var elem = document.createElement('style')
+  elem.setAttribute('type', 'text/css')
+
+  if ('textContent' in elem) {
+    elem.textContent = css
+  } else {
+    elem.styleSheet.cssText = css
+  }
+
+  document.getElementsByTagName('head')[0].appendChild(elem)
+  return function () {
+    document.getElementsByTagName('head')[0].removeChild(elem)
+    inserted[css] = false
+  }
+}
+
+},{}]},{},[2]);
