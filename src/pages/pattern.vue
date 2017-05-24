@@ -1,10 +1,7 @@
 <template lang="html">
   <div>
-    <div class="header">
-      <h1 class="h1">vue-transition-css</h1>
-    </div>
     <div class="container">
-      <h2>Transition Pattern</h2>
+      <h2 class="h2">Transition Pattern</h2>
       <div class="item">
         <button @click="start('isJump')">Jump</button>
         <transition name="jump">
@@ -23,6 +20,18 @@
           <div class="block block-fade" v-if="isSlideLeft"></div>
         </transition>
       </div>
+      <div class="item">
+        <button @click="start('isScaleUp')">ScaleUp</button>
+        <transition name="scale-up">
+          <div class="block block-fade" v-if="isScaleUp"></div>
+        </transition>
+      </div>
+      <div class="item">
+        <button @click="start('isScaleDown')">ScaleDown</button>
+        <transition name="scale-down">
+          <div class="block block-fade" v-if="isScaleDown"></div>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +43,9 @@ export default {
     return {
       isJump: false,
       isFade: false,
-      isSlideLeft: false
+      isSlideLeft: false,
+      isScaleUp: false,
+      isScaleDown: false,
     }
   },
   methods: {
@@ -47,13 +58,12 @@ export default {
 }
 </script>
 <style lang="scss">
-.container{
-  width: 800px;
-  margin: 0 auto;
+.h2{
+  margin: 40px 0;
 }
 .item{
   height: 100px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   vertical-align: top;
 }
 .block{

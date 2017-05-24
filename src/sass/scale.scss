@@ -1,0 +1,36 @@
+.scale-up-enter-active {
+  animation: scaleUp .2s;
+}
+.scale-up-leave-active {
+  animation: scaleUp .2s reverse;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    transform: scale3D(1.2, 1.2, 1.2);
+  }
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+
+}
+.scale-down-enter-active {
+  animation: scaleDown .2s;
+}
+.scale-down-leave-active {
+  animation: scaleDown .2s reverse;
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale3D(1.2, 1.2, 1.2);
+  }
+  50% {
+    transform: scale3D(0.8, 0.8, 0.8);
+  }
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+
+}

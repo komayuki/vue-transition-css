@@ -37,8 +37,10 @@
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^4.3.11",
     "http-server": "^0.10.0",
+    "lodash": "^4.17.4",
     "node-fs-extra": "^0.8.2",
     "vue": "^2.3.3",
+    "vue-router": "^2.5.3",
     "vueify": "^9.4.1",
     "watchify": "^3.9.0"
   },
