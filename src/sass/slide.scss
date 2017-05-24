@@ -1,11 +1,19 @@
-.slide-left-enter-active,
-.slide-fade-leave-active {
-  transition: all .3s ease;
+.slide-left-enter-active{
+  animation: anima .1s;
 }
-.slide-left-enter{
-  transform: translateX(10px);
+.slide-left-leave-active {
+  animation: anima .1s reverse;
 }
-.slide-left-leave-to,
-.slide-left-leave,{
-  transform: translateX(10px);
+@keyframes anima {
+  0% {
+    opacity: .1;
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

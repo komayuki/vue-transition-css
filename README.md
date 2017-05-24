@@ -1,8 +1,9 @@
 # vue-transition-css  
 
 ## Usage  
-build  
-`npm run build`
+include "vue-transition.css" your page  
+`<link href="vue-transition.css" rel="stylesheet" type="text/css" media="all" />`
 
-## DEMO
+
+## Show Vue-transition demo page
 https://komayuki.github.io/vue-transition-css/

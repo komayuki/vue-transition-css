@@ -7497,7 +7497,7 @@ exports.insert = function (css) {
 }
 
 },{}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 48, stdin */\n.h1 {\n  text-align: center; }\n\n/* line 51, stdin */\n.container {\n  width: 800px;\n  margin: 0 auto; }\n\n/* line 55, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 32px;\n  vertical-align: top; }\n\n/* line 60, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px;\n  display: inline-block;\n  vertical-align: top; }\n\n/* line 67, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 70, stdin */\n.block-fade {\n  background-color: #29B6F6; }\n\n/* line 73, stdin */\nbutton {\n  width: 100px;\n  padding: 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top;\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }\n\n/* line 84, stdin */\nbutton:hover {\n  box-shadow: none; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 50, stdin */\n.container {\n  width: 800px;\n  margin: 0 auto; }\n\n/* line 54, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 32px;\n  vertical-align: top; }\n\n/* line 59, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px;\n  display: inline-block;\n  vertical-align: top; }\n\n/* line 66, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 69, stdin */\n.block-fade {\n  background-color: #29B6F6; }\n\n/* line 72, stdin */\nbutton {\n  width: 100px;\n  padding: 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top;\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }\n\n/* line 83, stdin */\nbutton:hover {\n  box-shadow: none; }")
 ;(function(){
 'use strict';
 
@@ -7530,17 +7530,17 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")]),_vm._v(" "),_c('h2',[_vm._v("Transition Pattern")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isSlideLeft')}}},[_vm._v("SlideLeft")]),_vm._v(" "),_c('transition',{attrs:{"name":"slide-left"}},[(_vm.isSlideLeft)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1)])])}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"container"},[_c('h2',[_vm._v("Transition Pattern")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isSlideLeft')}}},[_vm._v("SlideLeft")]),_vm._v(" "),_c('transition',{attrs:{"name":"slide-left"}},[(_vm.isSlideLeft)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1)])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header"},[_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d80bff4", __vue__options__)
+    hotAPI.createRecord("data-v-5495f1c5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5d80bff4", __vue__options__)
+    hotAPI.rerender("data-v-5495f1c5", __vue__options__)
   }
 })()}
 },{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],6:[function(require,module,exports){

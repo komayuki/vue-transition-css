@@ -1,7 +1,9 @@
 <template lang="html">
   <div>
-    <div class="container">
+    <div class="header">
       <h1 class="h1">vue-transition-css</h1>
+    </div>
+    <div class="container">
       <h2>Transition Pattern</h2>
       <div class="item">
         <button @click="start('isJump')">Jump</button>
@@ -45,9 +47,6 @@ export default {
 }
 </script>
 <style lang="scss">
-.h1{
-  text-align: center;
-}
 .container{
   width: 800px;
   margin: 0 auto;
