@@ -27121,7 +27121,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}],9:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("button{\n  margin-bottom: 16px;\n}\nul{\n  margin: 0 0 32px 0;\n  padding: 0;\n  list-style: none;\n  color: #666;\n}\nul li{\n  border: solid 1px #dcdcdc;\n  padding: 16px;\n  margin-bottom: -1px;\n  cursor: pointer;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input[type=text] {\n  padding: 8px;\n  font-size: 18px;\n}\nbutton{\n  margin-bottom: 16px;\n}\n.effects{\n  margin-bottom: 10px;\n}\n.effects > label{\n  margin-right: 10px;\n  display: inline-block;\n}\nul{\n  margin: 0 0 32px 0;\n  padding: 0;\n  list-style: none;\n  color: #666;\n}\nul li{\n  border: solid 1px #dcdcdc;\n  padding: 16px;\n  margin-bottom: -1px;\n  cursor: pointer;\n}")
 ;(function(){
 'use strict';
 
@@ -27136,7 +27136,9 @@ exports.default = {
   name: 'page-list',
   data: function data() {
     return {
-      patterns: ['jump', 'fade', 'slide-left', 'scale-up', 'scale-down'],
+      currentEffect: 'jump',
+      input: '',
+      patterns: [{ name: 'Jump', t: 'jump' }, { name: 'Fade', t: 'fade' }, { name: 'SlideLeft', t: 'slide-left' }, { name: 'SlideRight', t: 'slide-right' }, { name: 'ScaleUp', t: 'scale-up' }, { name: 'ScaleDown', t: 'scale-down' }],
       list: (0, _lodash.cloneDeep)(defaultList)
     };
   },
@@ -27144,6 +27146,13 @@ exports.default = {
   methods: {
     reset: function reset() {
       this.list = (0, _lodash.cloneDeep)(defaultList);
+    },
+    add: function add() {
+      if (this.input === '') {
+        return;
+      }
+      this.list.push(this.input);
+      this.input = "";
     },
     remove: function remove(index) {
       this.list.splice(index, 1);
@@ -27154,7 +27163,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('h2',[_vm._v("DEMO List")]),_vm._v(" "),_c('button',{on:{"click":_vm.reset}},[_vm._v("Reset list")]),_vm._v(" "),_c('ul',[_c('transition-group',{attrs:{"name":"slide-left"}},_vm._l((_vm.list),function(item,index){return _c('li',{key:item,on:{"click":function($event){_vm.remove(index)}}},[_vm._v(" "+_vm._s(item)+" ")])}))],1)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('h2',[_vm._v("DEMO List")]),_vm._v(" "),_c('div',{staticClass:"effects"},[_vm._l((_vm.patterns),function(item){return [_c('label',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.currentEffect),expression:"currentEffect"}],attrs:{"type":"radio"},domProps:{"value":item.t,"checked":_vm._q(_vm.currentEffect,item.t)},on:{"__c":function($event){_vm.currentEffect=item.t}}}),_vm._v("\n        "+_vm._s(item.name)+"\n      ")])]})],2),_vm._v(" "),_c('button',{on:{"click":_vm.reset}},[_vm._v("Reset list")]),_vm._v(" "),_c('ul',[_c('transition-group',{attrs:{"name":_vm.currentEffect}},_vm._l((_vm.list),function(item,index){return _c('li',{key:item,on:{"click":function($event){_vm.remove(index)}}},[_vm._v(" "+_vm._s(item)+" ")])}))],1),_vm._v(" "),_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],attrs:{"type":"text"},domProps:{"value":(_vm.input)},on:{"input":function($event){if($event.target.composing){ return; }_vm.input=$event.target.value}}}),_vm._v(" "),_c('button',{on:{"click":_vm.add}},[_vm._v("Add")])])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -27164,7 +27173,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5c88ae06", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5c88ae06", __vue__options__)
+    hotAPI.rerender("data-v-5c88ae06", __vue__options__)
   }
 })()}
 },{"lodash":1,"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}],10:[function(require,module,exports){
