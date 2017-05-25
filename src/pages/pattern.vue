@@ -20,15 +20,28 @@
           <div class="text" v-if="isFade">Fade</div>
         </transition>
       </div>
+
+      <h3>Slide</h3>
       <div class="item">
         <button @click="start('isSlideLeft')">SlideLeft</button>
         <transition name="slide-left">
-          <div class="block block-fade" v-if="isSlideLeft"></div>
+          <div class="block" v-if="isSlideLeft"></div>
         </transition>
         <transition name="slide-left">
           <div class="text" v-if="isSlideLeft">SlideLeft</div>
         </transition>
       </div>
+      <div class="item">
+        <button @click="start('isSlideRight')">SlidRight</button>
+        <transition name="slide-right">
+          <div class="block" v-if="isSlideRight"></div>
+        </transition>
+        <transition name="slide-right">
+          <div class="text" v-if="isSlideRight">SlideRight</div>
+        </transition>
+      </div>
+
+      <h3>Scale</h3>
       <div class="item">
         <button @click="start('isScaleUp')">ScaleUp</button>
         <transition name="scale-up">
@@ -59,6 +72,7 @@ export default {
       isJump: false,
       isFade: false,
       isSlideLeft: false,
+      isSlideRight: false,
       isScaleUp: false,
       isScaleDown: false,
     }
