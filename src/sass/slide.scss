@@ -1,19 +1,18 @@
 .slide-left-enter-active{
-  animation: anima .1s;
+  animation: anima .2s;
 }
 .slide-left-leave-active {
-  animation: anima .1s reverse;
+  animation: anima .2s reverse;
 }
 @keyframes anima {
+
   0% {
-    opacity: .1;
-    transform: translateX(15px);
+    transform: translate3d(30px, 0, 0);
   }
-  50% {
-    transform: translateX(10px);
+  70% {
+    transform: translate3d(-5px, 0, 0);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0px, 0, 0);
   }
 }

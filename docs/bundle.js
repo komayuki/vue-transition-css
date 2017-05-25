@@ -27094,7 +27094,7 @@ var app = new _vue2.default({
 });
 
 },{"./pages/app.vue":8,"./pages/list.vue":9,"./pages/pattern.vue":10,"vue":5,"vue-router":4}],8:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".header[data-v-519c7d0c]{\n  margin: 0;\n  padding: 80px 0;\n  background: #42b983;\n  position: relative;\n}\n.header > .h1[data-v-519c7d0c]{\n  text-align: center;\n  color: #fff;\n  font-size: 40px;\n}\nnav[data-v-519c7d0c]{\n  position: absolute;\n  top: 32px;\n  right: 32px;\n}\nnav a[data-v-519c7d0c]{\n  text-decoration: none;\n  margin-left: 16px;\n  color: #fff;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".header[data-v-028ef069]{\n  margin: 0;\n  padding: 80px 0;\n  background: #42b983;\n  position: relative;\n}\n.header > .h1[data-v-028ef069]{\n  text-align: center;\n  color: #fff;\n  font-size: 40px;\n}\nnav[data-v-028ef069]{\n  position: absolute;\n  top: 32px;\n  right: 32px;\n}\nnav a[data-v-028ef069]{\n  text-decoration: none;\n  margin-left: 16px;\n  color: #fff;\n}")
 ;(function(){
 "use strict";
 
@@ -27108,16 +27108,16 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"header"},[_c('nav',[_c('router-link',{attrs:{"to":"/"}},[_vm._v("home")]),_vm._v(" "),_c('router-link',{attrs:{"to":"/list"}},[_vm._v("list")])],1),_vm._v(" "),_c('h1',{staticClass:"h1"},[_vm._v("vue-transition-css")])]),_vm._v(" "),_c('router-view')],1)}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-519c7d0c"
+__vue__options__._scopeId = "data-v-028ef069"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-519c7d0c", __vue__options__)
+    hotAPI.createRecord("data-v-028ef069", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-519c7d0c", __vue__options__)
+    hotAPI.reload("data-v-028ef069", __vue__options__)
   }
 })()}
 },{"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}],9:[function(require,module,exports){
@@ -27162,13 +27162,13 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1c3fff15", __vue__options__)
+    hotAPI.createRecord("data-v-5c88ae06", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1c3fff15", __vue__options__)
+    hotAPI.reload("data-v-5c88ae06", __vue__options__)
   }
 })()}
 },{"lodash":1,"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}],10:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 61, stdin */\n.h2 {\n  margin: 40px 0; }\n\n/* line 64, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 40px;\n  vertical-align: top; }\n\n/* line 69, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 0 16px 16px;\n  display: inline-block;\n  vertical-align: top; }\n\n/* line 76, stdin */\n.block-jump {\n  background-color: #FFA000; }\n\n/* line 79, stdin */\n.block-fade {\n  background-color: #29B6F6; }\n\n/* line 82, stdin */\nbutton {\n  width: 100px;\n  padding: 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top;\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }\n\n/* line 93, stdin */\nbutton:hover {\n  box-shadow: none; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 76, stdin */\n.h2 {\n  margin: 40px 0; }\n\n/* line 79, stdin */\n.item {\n  height: 100px;\n  margin-bottom: 40px;\n  vertical-align: top; }\n\n/* line 84, stdin */\n.block {\n  width: 100px;\n  height: 100px;\n  margin: 0 32px 16px 32px;\n  display: inline-block;\n  vertical-align: top;\n  background: #42b983; }\n\n/* line 92, stdin */\n.text {\n  display: inline-block; }\n\n/* line 95, stdin */\nbutton {\n  width: 100px;\n  padding: 8px 16px;\n  font-size: 14px;\n  background: #fff;\n  border: solid 1px #dcdcdc;\n  margin-right: 20px;\n  vertical-align: top;\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }\n\n/* line 106, stdin */\nbutton:hover {\n  box-shadow: none; }")
 ;(function(){
 'use strict';
 
@@ -27203,7 +27203,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h2',{staticClass:"h2"},[_vm._v("Transition Pattern")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block block-jump"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isSlideLeft')}}},[_vm._v("SlideLeft")]),_vm._v(" "),_c('transition',{attrs:{"name":"slide-left"}},[(_vm.isSlideLeft)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isScaleUp')}}},[_vm._v("ScaleUp")]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-up"}},[(_vm.isScaleUp)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isScaleDown')}}},[_vm._v("ScaleDown")]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-down"}},[(_vm.isScaleDown)?_c('div',{staticClass:"block block-fade"}):_vm._e()])],1)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"container"},[_c('h2',{staticClass:"h2"},[_vm._v("Transition Pattern")]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isJump')}}},[_vm._v("Jump")]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"block"}):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"jump"}},[(_vm.isJump)?_c('div',{staticClass:"text"},[_vm._v("Jump")]):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isFade')}}},[_vm._v("Fade")]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"block block-fade"}):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.isFade)?_c('div',{staticClass:"text"},[_vm._v("Fade")]):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isSlideLeft')}}},[_vm._v("SlideLeft")]),_vm._v(" "),_c('transition',{attrs:{"name":"slide-left"}},[(_vm.isSlideLeft)?_c('div',{staticClass:"block block-fade"}):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"slide-left"}},[(_vm.isSlideLeft)?_c('div',{staticClass:"text"},[_vm._v("SlideLeft")]):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isScaleUp')}}},[_vm._v("ScaleUp")]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-up"}},[(_vm.isScaleUp)?_c('div',{staticClass:"block block-fade"}):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-up"}},[(_vm.isScaleUp)?_c('div',{staticClass:"text"},[_vm._v("ScaleUp")]):_vm._e()])],1),_vm._v(" "),_c('div',{staticClass:"item"},[_c('button',{on:{"click":function($event){_vm.start('isScaleDown')}}},[_vm._v("ScaleDown")]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-down"}},[(_vm.isScaleDown)?_c('div',{staticClass:"block block-fade"}):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"scale-down"}},[(_vm.isScaleDown)?_c('div',{staticClass:"text"},[_vm._v("ScaleDown")]):_vm._e()])],1)])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -27211,9 +27211,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-170a5ae9", __vue__options__)
+    hotAPI.createRecord("data-v-3d6f0b50", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-170a5ae9", __vue__options__)
+    hotAPI.rerender("data-v-3d6f0b50", __vue__options__)
   }
 })()}
 },{"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}]},{},[7]);

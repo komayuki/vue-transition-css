@@ -5,7 +5,10 @@
       <div class="item">
         <button @click="start('isJump')">Jump</button>
         <transition name="jump">
-          <div class="block block-jump" v-if="isJump"></div>
+          <div class="block" v-if="isJump"></div>
+        </transition>
+        <transition name="jump">
+          <div class="text" v-if="isJump">Jump</div>
         </transition>
       </div>
       <div class="item">
@@ -13,11 +16,17 @@
         <transition name="fade">
           <div class="block block-fade" v-if="isFade"></div>
         </transition>
+        <transition name="fade">
+          <div class="text" v-if="isFade">Fade</div>
+        </transition>
       </div>
       <div class="item">
         <button @click="start('isSlideLeft')">SlideLeft</button>
         <transition name="slide-left">
           <div class="block block-fade" v-if="isSlideLeft"></div>
+        </transition>
+        <transition name="slide-left">
+          <div class="text" v-if="isSlideLeft">SlideLeft</div>
         </transition>
       </div>
       <div class="item">
@@ -25,11 +34,17 @@
         <transition name="scale-up">
           <div class="block block-fade" v-if="isScaleUp"></div>
         </transition>
+        <transition name="scale-up">
+          <div class="text" v-if="isScaleUp">ScaleUp</div>
+        </transition>
       </div>
       <div class="item">
         <button @click="start('isScaleDown')">ScaleDown</button>
         <transition name="scale-down">
           <div class="block block-fade" v-if="isScaleDown"></div>
+        </transition>
+        <transition name="scale-down">
+          <div class="text" v-if="isScaleDown">ScaleDown</div>
         </transition>
       </div>
     </div>
@@ -69,19 +84,17 @@ export default {
 .block{
   width: 100px;
   height: 100px;
-  margin: 0 0 16px 16px;
+  margin: 0 32px 16px 32px;
   display: inline-block;
   vertical-align: top;
+  background: #42b983;
 }
-.block-jump{
-  background-color: #FFA000;
-}
-.block-fade{
-  background-color: #29B6F6;
+.text{
+  display: inline-block;
 }
 button{
   width: 100px;
-  padding: 16px;
+  padding: 8px 16px;
   font-size: 14px;
   background: #fff;
   border: solid 1px #dcdcdc;
