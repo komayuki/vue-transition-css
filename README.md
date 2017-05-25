@@ -14,7 +14,10 @@ include "vue-transition.css" your page
 ## transition pattern
 - jump  
 - fade
-- slide-left
+- slideLeft
+- slideRight
+- scaleUp
+- scaleDown
 
-## Show Vue-transition demo page
+## click link if you want to see Demo
 https://komayuki.github.io/vue-transition-css/
