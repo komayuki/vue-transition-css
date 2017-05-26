@@ -1,8 +1,14 @@
 {
   "name": "vue-transition-css",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "css file for vuejs transition",
   "main": "index.js",
+  "keyword": [
+    "Vuejs",
+    "CSS",
+    "transition",
+    "animation"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-docs": "node lib/update-docs.js",
@@ -14,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/komayuki/vue-transition-css.git"
   },
-  "author": "masayuki komatsu",
+  "author": "Masayuki Komatsu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/komayuki/vue-transition-css/issues"
