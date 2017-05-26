@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="container">
-    <h2>DEMO List</h2>
+    <h2>DEMO</h2>
+    <h3>Effects</h3>
     <div class="effects">
       <template v-for="item in patterns">
         <label>
@@ -9,16 +10,29 @@
         </label>
       </template>
     </div>
-    <button @click="reset">Reset list</button>
+
+    <h3>Type</h3>
+    <div>
+      <label>
+        <input type="radio" value="list" v-model="type">
+        List
+      </label>
+      <label>
+        <input type="radio" value="panel" v-model="type">
+        Panel
+      </label>
+    </div>
+    <h3>Preview</h3>
     <ul>
       <transition-group :name="currentEffect">
-        <li v-for="(item, index) in list" :key="item" @click="remove(index)"> {{item}} </li>
+        <li v-for="(item, index) in list" :key="item" @click="remove(index)" :class="type"> {{item}} </li>
       </transition-group>
     </ul>
-    <div>
+    <div style="clear: both;">
       <input type="text" v-model="input">
       <button @click="add">Add</button>
     </div>
+    <button @click="reset">Reset list</button>
   </div>
 </template>
 
@@ -29,6 +43,7 @@ export default {
   name: 'page-list',
   data () {
     return {
+      type: "list",
       currentEffect: 'jump',
       input: '',
       patterns: [
@@ -55,7 +70,7 @@ export default {
     },
     remove (index) {
       this.list.splice(index, 1)
-    }
+    },
   }
 }
 </script>
@@ -82,9 +97,20 @@ ul{
   color: #666;
 }
 ul li{
+}
+.list{
   border: solid 1px #dcdcdc;
   padding: 16px;
   margin-bottom: -1px;
   cursor: pointer;
+}
+.panel{
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border: solid 1px #dcdcdc;
+  float: left;
+  margin-bottom: 32px;
+  margin-right: 32px;
 }
 </style>

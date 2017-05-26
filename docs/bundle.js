@@ -27121,7 +27121,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}],9:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input[type=text] {\n  padding: 8px;\n  font-size: 18px;\n}\nbutton{\n  margin-bottom: 16px;\n}\n.effects{\n  margin-bottom: 10px;\n}\n.effects > label{\n  margin-right: 10px;\n  display: inline-block;\n}\nul{\n  margin: 0 0 32px 0;\n  padding: 0;\n  list-style: none;\n  color: #666;\n}\nul li{\n  border: solid 1px #dcdcdc;\n  padding: 16px;\n  margin-bottom: -1px;\n  cursor: pointer;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input[type=text] {\n  padding: 8px;\n  font-size: 18px;\n}\nbutton{\n  margin-bottom: 16px;\n}\n.effects{\n  margin-bottom: 10px;\n}\n.effects > label{\n  margin-right: 10px;\n  display: inline-block;\n}\nul{\n  margin: 0 0 32px 0;\n  padding: 0;\n  list-style: none;\n  color: #666;\n}\nul li{\n}\n.list{\n  border: solid 1px #dcdcdc;\n  padding: 16px;\n  margin-bottom: -1px;\n  cursor: pointer;\n}\n.panel{\n  width: 150px;\n  height: 150px;\n  text-align: center;\n  border: solid 1px #dcdcdc;\n  float: left;\n  margin-bottom: 32px;\n  margin-right: 32px;\n}")
 ;(function(){
 'use strict';
 
@@ -27136,6 +27136,7 @@ exports.default = {
   name: 'page-list',
   data: function data() {
     return {
+      type: "list",
       currentEffect: 'jump',
       input: '',
       patterns: [{ name: 'Jump', t: 'jump' }, { name: 'Fade', t: 'fade' }, { name: 'SlideLeft', t: 'slide-left' }, { name: 'SlideRight', t: 'slide-right' }, { name: 'ScaleUp', t: 'scale-up' }, { name: 'ScaleDown', t: 'scale-down' }],
@@ -27163,7 +27164,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('h2',[_vm._v("DEMO List")]),_vm._v(" "),_c('div',{staticClass:"effects"},[_vm._l((_vm.patterns),function(item){return [_c('label',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.currentEffect),expression:"currentEffect"}],attrs:{"type":"radio"},domProps:{"value":item.t,"checked":_vm._q(_vm.currentEffect,item.t)},on:{"__c":function($event){_vm.currentEffect=item.t}}}),_vm._v("\n        "+_vm._s(item.name)+"\n      ")])]})],2),_vm._v(" "),_c('button',{on:{"click":_vm.reset}},[_vm._v("Reset list")]),_vm._v(" "),_c('ul',[_c('transition-group',{attrs:{"name":_vm.currentEffect}},_vm._l((_vm.list),function(item,index){return _c('li',{key:item,on:{"click":function($event){_vm.remove(index)}}},[_vm._v(" "+_vm._s(item)+" ")])}))],1),_vm._v(" "),_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],attrs:{"type":"text"},domProps:{"value":(_vm.input)},on:{"input":function($event){if($event.target.composing){ return; }_vm.input=$event.target.value}}}),_vm._v(" "),_c('button',{on:{"click":_vm.add}},[_vm._v("Add")])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('h2',[_vm._v("DEMO")]),_vm._v(" "),_c('h3',[_vm._v("Effects")]),_vm._v(" "),_c('div',{staticClass:"effects"},[_vm._l((_vm.patterns),function(item){return [_c('label',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.currentEffect),expression:"currentEffect"}],attrs:{"type":"radio"},domProps:{"value":item.t,"checked":_vm._q(_vm.currentEffect,item.t)},on:{"__c":function($event){_vm.currentEffect=item.t}}}),_vm._v("\n        "+_vm._s(item.name)+"\n      ")])]})],2),_vm._v(" "),_c('h3',[_vm._v("Type")]),_vm._v(" "),_c('div',[_c('label',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.type),expression:"type"}],attrs:{"type":"radio","value":"list"},domProps:{"checked":_vm._q(_vm.type,"list")},on:{"__c":function($event){_vm.type="list"}}}),_vm._v("\n      List\n    ")]),_vm._v(" "),_c('label',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.type),expression:"type"}],attrs:{"type":"radio","value":"panel"},domProps:{"checked":_vm._q(_vm.type,"panel")},on:{"__c":function($event){_vm.type="panel"}}}),_vm._v("\n      Panel\n    ")])]),_vm._v(" "),_c('h3',[_vm._v("Preview")]),_vm._v(" "),_c('ul',[_c('transition-group',{attrs:{"name":_vm.currentEffect}},_vm._l((_vm.list),function(item,index){return _c('li',{key:item,class:_vm.type,on:{"click":function($event){_vm.remove(index)}}},[_vm._v(" "+_vm._s(item)+" ")])}))],1),_vm._v(" "),_c('div',{staticStyle:{"clear":"both"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],attrs:{"type":"text"},domProps:{"value":(_vm.input)},on:{"input":function($event){if($event.target.composing){ return; }_vm.input=$event.target.value}}}),_vm._v(" "),_c('button',{on:{"click":_vm.add}},[_vm._v("Add")])]),_vm._v(" "),_c('button',{on:{"click":_vm.reset}},[_vm._v("Reset list")])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -27223,7 +27224,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3d6f0b50", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3d6f0b50", __vue__options__)
+    hotAPI.reload("data-v-3d6f0b50", __vue__options__)
   }
 })()}
 },{"vue":5,"vue-hot-reload-api":3,"vueify/lib/insert-css":6}]},{},[7]);
