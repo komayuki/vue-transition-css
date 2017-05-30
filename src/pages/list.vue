@@ -64,11 +64,16 @@ export default {
   watch: {
     'type' () {
       this.list = []
-      setTimeout(() => {
-          this.list = cloneDeep(defaultList)
-      }, 300)
+      let removeList = new Promise((resolve, reject) => {
+	this.list = []
+	setTimeout(() => {
+	  resolve()  
+	}, 250)
+      })
 
-
+      removeList.then(() => {
+	this.list = cloneDeep(defaultList)	
+      })
     }
   },
   methods: {
