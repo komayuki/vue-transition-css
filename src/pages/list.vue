@@ -23,16 +23,20 @@
       </label>
     </div>
     <h3>Preview</h3>
-    <ul>
-      <transition-group :name="currentEffect">
-        <li v-for="(item, index) in list" :key="item" @click="remove(index)" :class="type"> {{item}} </li>
-      </transition-group>
-    </ul>
-    <div style="clear: both;">
+
+    <div class="form">
       <input type="text" v-model="input">
-      <button @click="add">Add</button>
+      <button @click="add" class="add">Add</button>
+      <button @click="reset">Reset list</button>
     </div>
-    <button @click="reset">Reset list</button>
+    <div class="preview">
+      <ul class="ul">
+        <transition-group :name="currentEffect">
+          <li v-for="(item, index) in list" :key="item" @click="remove(index)" :class="type"> {{item}} </li>
+        </transition-group>
+      </ul>
+      <div class="clear"></div>
+    </div>
   </div>
 </template>
 
@@ -57,6 +61,16 @@ export default {
       list: cloneDeep(defaultList)
     }
   },
+  watch: {
+    'type' () {
+      this.list = []
+      setTimeout(() => {
+          this.list = cloneDeep(defaultList)
+      }, 300)
+
+
+    }
+  },
   methods: {
     reset () {
       this.list = cloneDeep(defaultList)
@@ -75,13 +89,30 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+.form{
+  margin-bottom: 16px;
+}
 input[type=text] {
-  padding: 8px;
+  padding: 6px;
+  margin-bottom: 6px;
   font-size: 18px;
+  width: 100%;
+  border-radius: 3px;
+  border: solid 1px #dcdcdc;
 }
 button{
-  margin-bottom: 16px;
+  width: 100px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 3px;
+  background: #fff;
+  border: solid 1px #dcdcdc;
+  font-size: 14px;
+}
+button.add{
+  background: #42b983;
+  color: #fff;
 }
 .effects{
   margin-bottom: 10px;
@@ -95,22 +126,31 @@ ul{
   padding: 0;
   list-style: none;
   color: #666;
+  clear: both;
 }
 ul li{
+  font-size: 13px;
 }
 .list{
   border: solid 1px #dcdcdc;
   padding: 16px;
   margin-bottom: -1px;
   cursor: pointer;
+  background: #fff;
 }
 .panel{
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  padding: 50px 0;
   text-align: center;
   border: solid 1px #dcdcdc;
-  float: left;
-  margin-bottom: 32px;
-  margin-right: 32px;
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+.preview{
+  min-height: 500px;
+}
+.clear{
+  clear: both;
 }
 </style>
