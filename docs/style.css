@@ -14,10 +14,8 @@ a{
   margin: 0 auto;
 }
 footer{
-  border-top: solid 1px #dcdcdc;
+  text-align: center;
+  padding: 16px;
 }
 .footer_in{
-  width: 1000px;
-  margin: 0 auto;
-  padding: 16px;
 }

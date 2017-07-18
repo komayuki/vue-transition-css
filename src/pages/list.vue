@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
-    <h2>DEMO</h2>
-    <h3>Effects</h3>
+    <router-link to="/"><< back</router-link>
+    <h3>Transition Name</h3>
     <div class="effects">
       <template v-for="item in patterns">
         <label>
@@ -67,12 +67,12 @@ export default {
       let removeList = new Promise((resolve, reject) => {
 	this.list = []
 	setTimeout(() => {
-	  resolve()  
+	  resolve()
 	}, 250)
       })
 
       removeList.then(() => {
-	this.list = cloneDeep(defaultList)	
+	this.list = cloneDeep(defaultList)
       })
     }
   },
