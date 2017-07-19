@@ -1,6 +1,6 @@
 {
   "name": "vue-transition-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "css file for vuejs transition",
   "main": "index.js",
   "keyword": [
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-docs": "node lib/update-docs.js",
     "build": "browserify -e src/main.js -o docs/bundle.js",
-    "watch": "watchify src/main.js -o docs/bundle.js",
+    "watch": "watchify -p [ browserify-hmr -m fs ] src/main.js -o docs/bundle.js",
     "start": "http-server docs"
   },
   "repository": {

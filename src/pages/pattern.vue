@@ -4,7 +4,10 @@
       <h2>Demo</h2>
       <ul>
         <li>
-          <router-link to="/list">todo list</router-link>
+          <router-link to="/list">TodoList</router-link>
+        </li>
+        <li>
+          <router-link to="/modal">Modal</router-link>
         </li>
       </ul>
     </div>

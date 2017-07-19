@@ -1,0 +1,11 @@
+.long-form-enter-active {
+  transition: all .2s ease;
+}
+.long-form-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.long-form-enter, .long-form-leave-to{
+  border-right: solid 1px #ddd !important;
+  opacity: 0;
+  transform: scaleX(0px);
+}
