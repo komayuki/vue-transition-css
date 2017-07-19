@@ -1,6 +1,6 @@
 {
   "name": "vue-transition-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "css file for vuejs transition",
   "main": "index.js",
   "keyword": [
