@@ -1,9 +1,9 @@
 {
   "name": "vue-transition-css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "css file for vuejs transition",
   "main": "index.js",
-  "keyword": [
+  "keywords": [
     "Vuejs",
     "CSS",
     "transition",
